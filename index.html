@@ -12,23 +12,149 @@
 
      <nav>
         <ul>
-         <li>!DOCTYPE, HTML, and Head Tags</li>
-         <li>Linking to Other Pages</li>
-         <li>Semantic HTML</li>
-         <li>Header & Nav</li>
-         <li>Main & Footer</li>
-         <li>Article & Section</li>
-         <li>Aside Elements</li>
-         <li>Figure & Figcaption Elements</li>
-         <li>Audio and Attributes</li>
-         <li>Video and Embed</li>
+         <li><a href="#one">!DOCTYPE, HTML, and Head Tags</a></li>
+         <li><a href="#two">Linking to Other Pages</li>
+         <li><a href="#three">Semantic HTML</li>
+         <li><a href="#four">Header & Nav</a></li>
+         <li><a href="#five">Main & Footer</a></li>
+         <li><a href="#six">Article & Section</a></li>
+         <li><a href="#seven">Aside Elements</a></li>
+         <li><a href="#eight">Figure & Figcaption Elements</a></li>
+         <li><a href="#nine">Audio and Attributes</a></li>
+         <li><a href="#ten">Video and Embed</a></li>
         </ul>
      </nav>
 
      <!-- Break for new main section -->
 
-     <section>
-
+      <section>
+         <article id="one">
+            <h2>!DOCTYPE, HTML, and Head Tags</h2>
+            <p>HTML files require certain elements to set up the document properly. We can let web browsers know that we are using HTML by starting our document with a document type declaration.
+               <br>
+               <br>            
+            The declaration looks like this:
+               <br>
+               <br>
+            &lt !DOCTYPE html &gt
+            </p>
+            <p>This declaration is an instruction, and it must be the first line of code in your HTML document. It tells the browser what type of document to expect, along with what version of HTML is being used in the document. For now, the browser will correctly assume that the html in &lt!DOCTYPE html&gt is referring to HTML5, as it is the current standard. In the future, however, a new standard will override HTML5. To make sure your document is forever interpreted correctly, always include &lt!DOCTYPE html&gt at the very beginning of your HTML documents.
+               <br>
+               <br>
+            Lastly, HTML code is always saved in a file with an .html extension.
+            </p>   
+            <p>The &lt!DOCTYPE html&gt declaration provides the browser with two pieces of information (the type of document and the HTML version to expect), but it doesn’t actually add any HTML structure or content. To create HTML structure and content, we must add opening and closing &lthtml&gt tags after declaring &lt!DOCTYPE html&gt:
+               <br>
+               <br>
+            &lt!DOCTYPE html&gt
+            &lthtml&gt
+               <br>
+               <br>   
+            &lt/html&gt
+               <br>
+               <br>
+            Anything between the opening &lthtml&gt and closing &lt/html&gt tags will be interpreted as HTML code. Without these tags, it’s possible that browsers could incorrectly interpret your HTML code.
+            </p>
+            <p>Information about the page can be provided to the browser by using the &lthead&gt element.
+               <br>
+               <br>
+            Similar to the &ltbody&gt tag, The &lthead&gt element is part of this HTML metaphor. It goes above the &ltbody&gt> element and contains the metadata for a web page. Metadata is information about the page that isn’t displayed directly on the web page. Unlike the information inside of the &ltbody&gt tag, the metadata in the head is information about the page itself.
+               <br>
+               <br>  
+            The opening and closing head tags typically appear as the first item after your first HTML tag.
+            </p>
+         </article> 
+         <article id="two">
+            <h2>Linking to Other Pages</h2>
+            <p>One of the powerful aspects of HTML (and the Internet), is the ability to link to other web pages. You can add links to a web page by adding an anchor element &lta&gt and including the text of the link in between the opening and closing tags.
+               <br>
+               <br>
+            The anchor element must have an href attribute in order to link to another location. This attribute (href) stands for hyperlink reference and is used to link to a path, or the address to where a file is located (whether it is on your computer or another location). The paths provided to the href attribute are often URLs. Here is an example of an anchor element with an href:
+               <br>
+               <br>
+            &lta href="https://www.wikipedia.org/"&gtThis Is A Link To Wikipedia&lt/a&gt
+               <br>
+               <br>               
+            When reading technical documentation, you may come across the term hyperlink. This is simply the technical term for link. These terms are often used interchangeably.
+               <br>
+               <br>
+            In addition to linking to other websites, you can also open links to new web pages by using the &lta&gt element's target attribute. The target attribute specifies how a link should open.
+               <br>
+               <br>
+            It’s possible that one or more links on your web page link to an entirely different website. In that case, you may want users to read the linked website, but hope that they return to your web page. This is exactly when the target attribute is useful!
+               <br>
+               <br>
+            For a link to open in a new window, the target attribute requires a value of "_blank". The target attribute can be added directly to the opening tag of the anchor element, just like the href attribute.
+               <br>
+               <br>
+            &lta href="https://en.wikipedia.org/wiki/Brown_bear" target="_blank"&gtThe Brown Bear&lt/a&gt
+               <br>
+               <br>
+            It’s likely that you are using a modern browser that opens up websites in new tabs, rather than new windows. Before the advent of browsers with tabs, additional browser windows had to be opened to view more websites. The target="_blank" attribute, when used in modern browsers, will open new websites in a new tab.
+               <br>
+               <br>
+            Many sites also link to internal web pages like Home, About, and Contact. When making multi-page static websites, web developers often store HTML files in the root directory, or a main folder where all the files for the project are stored. As the size of the projects you create grows, you may use additional folders within the main project folder to organize your code.
+               <br>
+               <br>
+            project-folder/ <br>
+            |—— about.html <br>
+            |—— contact.html <br>
+            |—— index.html <br>
+               <br>
+               <br>
+            The example above shows three different files — about.html, contact.html, and index.html in one folder.
+               <br>
+               <br>
+            HTML files are often stored in the same folder, as shown in the example above. If the browser is currently displaying index.html, it also knows that about.html and contact.html are in the same folder. Because the files are stored in the same folder, we can link web pages together using a relative path.
+               <br>
+               <br>
+            &lta href="./contact.html"&gtContact&lt/a&gt
+               <br>
+               <br>
+            In this example, the &lta&gt tag is used with a relative path to link from the current HTML file to the contact.html file in the same folder. On the web page, Contact will appear as a link.
+               <br>
+               <br>
+            A relative path is a filename that shows the path to a local file (a file on the same website, such as ./index.html) versus an absolute path (a full URL, like https://www.codecademy.com/learn/learn-html which is stored in a different folder). The ./ in ./index.html tells the browser to look for the file in the current folder.
+               <br>
+               <br>
+            You’ve probably visited websites where not all links were made up of text. Maybe the links you clicked on were images or some other form of content. Thankfully, HTML allows you to turn nearly any element into a link by wrapping that element with an anchor element. With this technique, it’s possible to turn images into links by simply wrapping the &ltimg&gt element with an &lta&gt element.
+               <br>
+               <br>
+            &lta href="https://en.wikipedia.org/wiki/Opuntia" target="_blank"&gt&ltimg src="https://www.Prickly_Pear_Closeup.jpg" alt="A red prickly pear fruit"/&gt&lt/a&gt
+            </p>  
+         </article> 
+         <article id="three">
+            <h2>Semantic HTML</h2>  
+            <p></p> 
+         </article> 
+         <article id="four">
+            <h2>Header & Nav</h2>
+            <p></p> 
+         </article> 
+         <article id="five">
+            <h2>Main & Footer</h2> 
+            <p></p>  
+         </article> 
+         <article id="six">
+            <h2>Article & Section</h2> 
+            <p></p>  
+         </article> 
+         <article id="seven">
+            <h2>Aside Elements</h2>   
+            <p></p>
+         </article> 
+         <article id="eight">
+            <h2>Figure & Figcaption Elements</h2> 
+            <p></p>  
+         </article> 
+         <article id="nine">
+            <h2>Audio and Attributes</h2>  
+            <p></p> 
+         </article> 
+         <article id="ten">
+            <h2>Video and Embed</h2> 
+            <p></p>  
+         </article> 
      </section>
 
      <!-- Break for new main section -->
