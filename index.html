@@ -125,35 +125,164 @@
          </article> 
          <article id="three">
             <h2>Semantic HTML</h2>  
-            <p></p> 
+            <p>When building web pages, there is a combined use of non-semantic HTML and Semantic HTML. The word semantic means “relating to meaning,” so semantic elements provide information about the content between the opening and closing tags.
+               <br>
+               <br>   
+            By using Semantic HTML, HTML elements are selected based on their meaning, not on how they are presented. Elements such as &ltdiv&gt and &ltspan&gt are not semantic elements since they provide no context as to what is inside of those tags.
+               <br>
+               <br>
+            For example, instead of using a &ltdiv&gt element to contain our header information, we could use a &ltheader&gt element, which is used as a heading section. By using a &ltheader&gt tag instead of a &ltdiv&gt, we provide context as to what information is inside of the opening and closing tag.
+               <br>
+               <br>
+            Semantic HTML is used for three primary reasons:
+               <br>
+            • Accessibility: Semantic HTML makes webpages accessible for mobile devices and for people with disabilities as well. This is because screen readers and browsers are able to interpret the code better.
+               <br>
+            • SEO: It improves the website SEO, or Search Engine Optimization, which is the process of increasing the number of people that visit your webpage. With better SEO, search engines are better able to identify the content of your website and weight the most important content appropriately.
+               <br>
+            • Easy to Understand: Semantic HTML also makes the website’s source code easier to read for other web developers.
+               <br>
+               <br>
+            To better understand this, you can think of comparing non-semantic HTML to going into a store with no signs on the aisles. Since the aisles aren’t labeled, you don’t know what products are in those aisles. However, stores that do have signs for each aisle make it a lot easier to find the items you need, just like Semantic HTML.
+               </p> 
          </article> 
          <article id="four">
             <h2>Header & Nav</h2>
-            <p></p> 
+            <p>A &ltheader&gt is a container usually for either navigational links or introductory content containing &lth1&gt to &lth6&gt headings. The example below shows &ltheader&gt in action:
+               <br>
+               <br>   
+            &ltheader&gt
+               <br>
+               &lth1&gtEverything you need to know about pizza!&lt/h1&gt
+               <br>
+            &lt/header&gt
+               <br>
+               <br>
+            This can be compared to the code below which uses a &ltdiv&gt tag instead of a &ltheader&gt tag:
+               <br>
+               <br>
+            &ltdiv id="header"&gt
+               <br>
+               &lth1&gtEverything you need to know about pizza!&lth1&gt
+               <br>
+            &lt/div&gt
+               <br>
+               <br>
+            By using a &ltheader&gt tag, the code becomes easier to read. It is much easier to identify what is inside of the &lth1&gt‘s parent tags, as opposed to a &ltdiv&gt tag.
+               <br>
+               <br>
+            A &ltnav&gt is used to define a block of navigation links such as menus and tables of contents. It is important to note that &ltnav&gt can be used inside of the &ltheader&gt element but can also be used on its own. Example:
+               <br>
+               <br>
+            &ltheader&gt <br>
+              &ltnav&gt <br>
+                &ltul&gt <br>
+                  &ltli&gt&lta href="#home"&gtHome&lt/a&gt&lt/li&gt <br>
+                  &ltli&gt&lta href="#about"&gtAbout&lt/a&gt&lt/li&gt <br>   
+            &lt/ul&gt <br>
+              &lt/nav&gt <br>
+            &lt/header&gt
+               <br>
+               <br>
+            </p> 
          </article> 
          <article id="five">
             <h2>Main & Footer</h2> 
-            <p></p>  
+            <p>Two more structural elements are &ltmain&gt and &ltfooter&gt. These elements along with &ltnav&gt and &ltheader&gt help describe where an element is located based on conventional web development standards.
+               <br>
+               <br>
+            The element &ltmain&gt is used to encapsulate the dominant content within a webpage. This tag is separate from the &ltfooter&gt and the &ltnav&gt of a web page since these elements don’t contain the principal content. By using &ltmain&gt> as opposed to a &ltdiv&gt element, screen readers and web browsers are better able to identify that whatever is inside of the tag is the bulk of the content.
+               <br>
+               <br>
+            &ltmain&gt<br>
+              &ltheader&gt<br>
+                &lth1&gtTypes of Sports&lt/h1&gt<br>
+              &lt/header&gt<br>
+              &ltarticle&gt<br>
+                &lth3&gtBaseball&lt/h3&gt<br>
+                &ltp&gtThe first game of baseball was played in Cooperstown, New York in the summer of 1839.&lt/p&gt<br>
+              &lt/article&gt<br>
+            &lt/main&gt
+               <br>
+               <br>
+            As shown above, &ltmain&gt contains an &ltarticle&gt and &ltheader&gt tag with child elements that hold the most important information related to the page.
+               <br>
+               <br>
+            The content at the bottom of the subject information is known as the footer, indicated by the &ltfooter&gt element. The footer contains information such as: <br>
+                  • Contact information<br>
+                  • Copyright information<br>
+                  • Terms of use<br>
+                  • Site Map<br>
+                  • Reference to top of page links<br>
+            </p>  
          </article> 
          <article id="six">
             <h2>Article & Section</h2> 
-            <p></p>  
+            <p>The &ltsection&gt and &ltarticle&gt elements are two eleemnts that reside within the &ltbody&gt tags.
+               <br>
+               <br>
+            &ltsection&gt defines elements in a document, such as chapters, headings, or any other area of the document with the same theme. For example, content with the same theme such as articles about cricket can go under a single &ltsection&gt. A website’s home page could be split into sections for the introduction, news items, and contact information.
+               <br>
+               <br>               
+            The &ltarticle&gt element holds content that makes sense on its own. &ltarticle&gt can hold content such as articles, blogs, comments, magazines, etc. An &ltarticle&gt tag would help someone using a screen reader understand where the article content (that might contain a combination of text, images, audio, etc.) begins and ends.
+            </p>  
          </article> 
          <article id="seven">
             <h2>Aside Elements</h2>   
-            <p></p>
+            <p>The &ltaside&gt element is used to mark additional information that can enhance another element but isn’t required in order to understand the main content. This element can be used alongside other elements such as &ltarticle&gt or &ltsection&gt. Some common uses of the &ltaside&gt element are for:<br>
+                  • Bibliographies<br>
+                  • Endnotes<br>
+                  • Comments<br>
+                  • Pull quotes<br>
+                  • Editorial sidebars<br>
+                  • Additional information
+            </p>
          </article> 
          <article id="eight">
             <h2>Figure & Figcaption Elements</h2> 
-            <p></p>  
+            <p>Similar to the &ltaside&gt element, we can also use the &ltfigure&gt and &ltfigcaption&gt to put additional images or illustrations nexts to a main piece of content.
+               <br>
+               <br>
+            &ltfigure&gt is an element used to encapsulate media such as an image, illustration, diagram, code snippet, etc, which is referenced in the main flow of the document.
+               <br>
+               <br>               
+            It’s possible to add a caption to the image by using &ltfigcaption&gt. &ltfigcaption&gt is an element used to describe the media in the &ltfigure&gt tag. Usually, &ltfigcaption&gt will go inside &ltfigure&gt, which is helpful if the &ltfigure&gt content gets moved around the page. If and when the &ltfigure&gt moves, the &ltfigcaption&gt will also move along with it.
+            </p>  
          </article> 
          <article id="nine">
             <h2>Audio and Attributes</h2>  
-            <p></p> 
+            <p>The &ltaudio&gt element is used to embed audio content into a document. Like &ltvideo&gt, &ltaudio&gt uses src to link the audio source.
+               <br>
+               <br>
+            &ltaudio&gt<br>
+              &ltsource src="iAmAnAudioFile.mp3" type="audio/mp3"&gt<br>
+            &lt/audio&gt
+               <br>
+               <br>
+            In the code above, an &ltaudio&gt element was created along with a &ltsource&gt element. iAmAnAudioFile.mp3 is the audio file and the audio type is specified. It is preferred to always state the type of audio as it helps the browser identify it more easily and determine if that type of audio file is supported by the browser.
+               <br>
+               <br>
+            Additionally, audio can be given controls with the use of attributes.Attributes provide additional information about an element and allow the user to do many different things to the audio file. Some examples of these attributes include: <br>
+                  • controls: automatically displays the audio controls into the browser such as play and mute.<br>
+                  • src: specifies the URL of the audio file.
+            </p> 
          </article> 
          <article id="ten">
             <h2>Video and Embed</h2> 
-            <p></p>  
+            <p>By using a &ltvideo&gt element, videos can be added to websites. Similar to audio, there are some attributes that can alter a video playback, which include: <br>
+               • controls: When added in, a play/pause button will be added onto the video along with volume control and a fullscreen option.<br>
+               • autoplay: The attribute which results in a video automatically playing as soon as the page is loaded.<br>
+               • loop: This attribute results in the video continuously playing on repeat.
+               <br>
+               <br>
+            Below is an example of &ltvideo&gt being used with the controls attribute:
+               <br>
+               <br>
+            &ltvideo src="coding.mp4" controls&gtVideo not supported&lt/video&gt
+               <br>
+               <br>
+            In the code above, the “Video not supported” will only show up if the browser is unable to display the video. Another tag that can be used to incorporate media content into a page is the <embed> tag, which can embed any media content including videos, audio files, and gifs from an external source. This means that websites that have an embed button have some form of media content that can be added to other websites. The &ltembed&gt tag is a self-closing tag, unlike the &ltvideo&gt element. Note that &ltembed&gt is a deprecated tag and other alternatives, such as &ltvideo&gt, &ltaudio&gt and &ltimg&gt should be used in its place.
+            </p>  
          </article> 
      </section>
 
